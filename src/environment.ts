@@ -45,7 +45,7 @@ export function setEnvironment(env: InstallationDetails): Promise<void> {
     log(chalk.bold.green(`Now configuring the Visual Studio Build Tools..`));
   } else {
     log(chalk.bold.green(`Skipping configuration: No configuration for Python or Visual Studio Build Tools required.`));
-    return(new Promise((resolve, reject) => resolve()))
+    return(new Promise<void>((resolve, reject) => resolve()))
       .then(() => log(chalk.bold.green(`\nAll done!\n`)));
   }
 
